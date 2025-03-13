@@ -1,0 +1,42 @@
+{
+  "name": "pivot-bootstrap-vite",
+  "version": "1.1.0",
+  "description": "A Bootstrap, Vite, and Handlebars starter from the dev team at Pivot Design. Configured based on Bootstrap's Vite documentation, but with some spicy extra features.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --emptyOutDir",
+    "build:dev": "vite build --mode staging --emptyOutDir",
+    "preview": "vite preview --port 8080",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PivotDev/pivot-bootstrap-vite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PivotDev/pivot-bootstrap-vite/issues"
+  },
+  "homepage": "https://github.com/PivotDev/pivot-bootstrap-vite#readme",
+  "devDependencies": {
+    "sass": "^1.74.1",
+    "vite": "^5.2.8",
+    "vite-plugin-handlebars": "^1.6.0",
+    "vite-plugin-static-copy": "^1.0.2"
+  },
+  "dependencies": {
+    "@lottiefiles/lottie-player": "^2.0.4",
+    "@popperjs/core": "^2.11.8",
+    "axios": "^1.8.3",
+    "bootstrap": "^5.3.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "gsap": "npm:@gsap/shockingly@^3.12.5",
+    "helpers-for-handlebars": "^0.10.11",
+    "http-proxy-middleware": "^3.0.3",
+    "request": "^2.88.2"
+  }
+}

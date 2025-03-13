@@ -1,0 +1,57 @@
+{{#> base }} {{> header home=this }}
+
+<div class="container">
+
+  <header class="intro">
+    <h1>Welcome to the WWDTM Fight Club</h1>
+    <p>Who will win?</p>
+    <ul id="panelists-list"></ul>
+  </header>
+
+  <section class="fighters">
+    <div id="paula-poundstone" class="fighter">
+      <h2>Paula Poundstone</h2>
+      <img src="images/paula-poundstone.jpg" alt="Paula Poundstone" />
+      <p>Paula Poundstone is a stand-up comedian, author, actress, interviewer, and commentator.</p>
+      <button onclick="fight('paula-poundstone')">Fight</button>
+    </div>
+    <div id="mo-rocca" class="fighter">
+      <h2>Mo Rocca</h2>
+      <img src="images/mo-rocca.jpg" alt="Mo Rocca" />
+      <p>Maurice Alberto "Mo" Rocca is an American humorist, journalist and actor. He is a correspondent for <em>CBS Sunday Morning</em>, the host and creator of <em>My Grandmother's Ravioli</em> on the Cooking Channel.</em></p>
+      <button onclick="fight('mo-rocca')">Fight</button>
+    </div>
+    <div id="josh-gondelman" class="fighter">
+      <h2>Josh Gondelman</h2>
+      <img src="images/josh-gondelman.jpg" alt="Josh Gondelman" />
+      <p>Josh Gondelman is an American comedian and writer. He is currently a writer for <em>Desus & Mero</em> on Showtime and previously wrote for <em>Last Week Tonight with John Oliver</em> on HBO.</p>
+      <button onclick="fight('josh-gondelman')">Fight</button>
+    </div>
+  </section>
+  <div id="winner" class="fighter">
+    <h2>Winner</h2>
+    <img src="images/wwdt-logo.png" alt="WWDT" />
+  </div>
+</div>
+
+<script>
+  // async function fetchPanelists() {
+  //     try {
+  //         const response = await fetch('http://localhost:3000/panelists');
+  //         const panelists = await response.json();
+  //         const list = document.getElementById('panelists-list');
+
+  //         panelists.forEach(panelist => {
+  //             const listItem = document.createElement('li');
+  //             listItem.textContent = panelist.name;
+  //             list.appendChild(listItem);
+  //         });
+  //     } catch (error) {
+  //         console.error('Error fetching panelists:', error);
+  //     }
+  // }
+
+  // fetchPanelists();
+</script>
+
+{{> footer }} {{/ base }}

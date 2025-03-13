@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>{{ title }}</title>
+    <meta name="author" content="" />
+    <meta name="description" content="{{ description }}">
+
+    {{#eq @mode "staging"}}
+      {{!-- Block Search indexing with noindex --}}
+      <meta name="robots" content="noindex">
+    {{/eq}}
+
+    {{!-- Optional: Remove if Fontawesome or theme toggling is not needed --}}
+    <script src="https://kit.fontawesome.com/6c14141002.js" crossorigin="anonymous"></script>
+</head>
+
+<body id="page-top" class="page-{{ slug }}">
+  {{#if @partial-block}}
+    {{> @partial-block }}
+  {{/if}}
+  <script type="module" src="/assets/js/main.js"></script>
+  {{#eq @mode "staging"}}
+  <!-- Whatever comes here will only render when running npm run build:dev, useful for environment specific Project Huddle Code -->
+  {{/eq}}
+</body>
+</html>

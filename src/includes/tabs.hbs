@@ -1,0 +1,17 @@
+<ul class="nav nav-tabs{{#unless tab.[1]}} inactive{{/unless}}" id="bsTabNav" role="tablist">
+  {{#each tabs}}
+  <li class="nav-item" role="presentation">
+      <button class="nav-link{{#if @first}} active{{/if}}" id="{{this.slug}}-tab" data-bs-toggle="tab" data-bs-target="#{{this.slug}}-tab-pane" type="button" role="tab" aria-controls="{{this.slug}}-tab-pane" aria-selected="{{#if @first}}true{{else}}false{{/if}}">{{this.title}}</button>
+  </li>
+  {{/each}}
+</ul> 
+<div class="tab-content" id="bsTabs">
+  {{#each tabs}}
+      <div class="tab-pane fade{{#if @first}} show active{{/if}}" id="{{this.slug}}-tab-pane" role="tabpanel" aria-labelledby="{{this.slug}}-tab" tabindex="0">
+        <div class="p-3">        
+            <h2>{{#eq @index 1}}<span class="text-primary">{{/eq}}{{this.headline}}{{#eq @index 1}}</span>{{/eq}}</h2>
+            {{{this.content}}}
+        </div>
+      </div>
+  {{/each}}
+</div>   

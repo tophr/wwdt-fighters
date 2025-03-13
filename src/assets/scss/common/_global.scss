@@ -1,0 +1,32 @@
+//
+// CSS antialiasing
+//
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+//
+// Bug fixes/overrides
+//
+html {
+  scroll-padding-top: 3.5rem;
+}
+
+header {
+  padding-top: 9.5rem;
+}
+
+section {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+}
+
+.fighters {
+  display: flex;
+  gap: 2rem;
+}
+
+.fighter {
+  flex: 1;
+}
