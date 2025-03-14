@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/PivotDev/pivot-bootstrap-vite#readme",
   "devDependencies": {
+    "nodemon": "^3.1.9",
     "sass": "^1.74.1",
     "vite": "^5.2.8",
     "vite-plugin-handlebars": "^1.6.0",

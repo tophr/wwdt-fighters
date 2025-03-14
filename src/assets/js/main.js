@@ -25,8 +25,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
   });
 
-  console.log("foo");
-
   // Query the WWDT Stats API https://github.com/questionlp/api.wwdt.me_v2 for total wins and losses for a panelist and display the results in the browser.
 
   // const panelistId = 'your-panelist-id'; // Replace with the actual panelist ID
@@ -49,29 +47,14 @@ window.addEventListener("DOMContentLoaded", (event) => {
   //     });
 
   // Retrieve a list of all panelists from the API
-  // const apiUrl = `http://localhost:3000/api/panelists`;
-  // const apiUrl = `https://api.wwdt.me/v2.0/panelists`;
-
-  // fetch(apiUrl)
-  //   .then((response) => {
-  //     if (!response.ok) {
-  //       throw new Error(`HTTP error! status: ${response.status}`);
-  //     }
-  //     return response.json();
-  //   })
-  //   .then((data) => {
-  //     console.log("List of all panelists:", data);
-  //   })
-  //   .catch((error) => {
-  //     console.error("Error fetching data:", error);
-  //   });
+  const apiURL = 'http://localhost:3000/api';
 
   const requestOptions = {
     method: "GET",
     redirect: "follow",
   };
 
-  fetch("http://localhost:3000/api/v2.0/panelists", requestOptions)
+  fetch(apiURL)
     .then((response) => response.json())
     .then((result) => console.log(result))
     .catch((error) => console.error(error));

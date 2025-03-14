@@ -35,23 +35,28 @@
 </div>
 
 <script>
-  // async function fetchPanelists() {
-  //     try {
-  //         const response = await fetch('http://localhost:3000/panelists');
-  //         const panelists = await response.json();
-  //         const list = document.getElementById('panelists-list');
+  async function fetchPanelists() {
+      try {
+          const response = await fetch('http://localhost:3000/api');
+          const panelists = await response.json();
 
-  //         panelists.forEach(panelist => {
-  //             const listItem = document.createElement('li');
-  //             listItem.textContent = panelist.name;
-  //             list.appendChild(listItem);
-  //         });
-  //     } catch (error) {
-  //         console.error('Error fetching panelists:', error);
-  //     }
-  // }
 
-  // fetchPanelists();
+          if (Array.isArray(panelists.panelists)) {
+            console.log('Panelists:', panelists);
+            const list = document.getElementById('panelists-list');
+
+            panelists.panelists.forEach(panelist => {
+                const listItem = document.createElement('li');
+                listItem.textContent = panelist.name;
+                list.appendChild(listItem);
+            });
+          }
+      } catch (error) {
+          console.error('Error fetching panelists:', error);
+      }
+  }
+
+  fetchPanelists();
 </script>
 
 {{> footer }} {{/ base }}
